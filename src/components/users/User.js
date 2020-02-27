@@ -23,8 +23,9 @@ const User = ({ user, loading, getUserRepos, getUser, repos, match }) => {
     followers,
     following,
     public_repos,
-    public_gists,
-    hireable
+    public_gists
+    //Did not want to use the "hireable" option.
+    // hireable
   } = user;
 
   if (loading) return <Spinner />;
@@ -34,12 +35,12 @@ const User = ({ user, loading, getUserRepos, getUser, repos, match }) => {
       <Link to='/' className='btn btn-dark'>
         Back to Search
       </Link>
-      Hireable:{' '}
+      {/* Hireable:{' '}
       {hireable ? (
         <i className='fas fa-check text-success' />
       ) : (
         <i className='fas fa-times-circle text-danger' />
-      )}
+      )} */}
       <div className='card grid-2'>
         <div className='all-center'>
           <img
